@@ -1,0 +1,8 @@
+FROM cypress/included:13.13.3
+
+WORKDIR /work
+COPY package.json package-lock.json* tsconfig.base.json .eslint* .prettier* ./
+COPY packages/cypress-e2e ./packages/cypress-e2e
+RUN npm ci --omit=optional
+WORKDIR /work/packages/cypress-e2e
+CMD ["npm","run","test"]

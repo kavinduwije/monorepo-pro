@@ -1,0 +1,18 @@
+services:
+  playwright:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.playwright
+    environment:
+      - BASE_URL=${BASE_URL:-https://playwright.dev}
+  cypress:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.cypress
+    environment:
+      - BASE_URL=${BASE_URL:-https://example.cypress.io}
+  appium:
+    image: appium/appium
+    command: ["--base-path", "/wd/hub"]
+    ports:
+      - "4723:4723"

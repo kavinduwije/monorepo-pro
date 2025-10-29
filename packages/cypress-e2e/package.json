@@ -1,0 +1,21 @@
+{
+  "name": "cypress-e2e",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "cypress run",
+    "test:headed": "cypress open",
+    "test:ci": "cypress run --browser chrome",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier . --write"
+  },
+  "devDependencies": {
+    "cypress": "^13.13.3",
+    "@shelex/cypress-allure-plugin": "^2.40.0",
+    "allure-commandline": "^2.29.0",
+    "typescript": "^5.6.3"
+  }
+}

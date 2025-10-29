@@ -1,0 +1,7 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["cypress", "@shelex/cypress-allure-plugin"]
+  },
+  "include": ["cypress/**/*.ts"]
+}
