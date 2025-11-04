@@ -19,6 +19,11 @@ Each project outputs `allure-results`; then:
 npm run -w <project> allure:generate
 npm run -w <project> allure:open
 ```
+For example here : 
+```
+npm run -w playwright-e2e allure:generate
+npm run -w playwright-e2e allure:open
+```
 
 ## Docker
 ```
