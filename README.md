@@ -1,19 +1,25 @@
 # Automation Monorepo **Pro** (Cypress, Playwright, WDIO, Appium)
 
-✅ Allure reporting  |  🐳 Docker ready  |  ☁️ BrowserStack/Sauce templates  |  🤖 Android emulator helper scripts
+📊 Allure reporting  |  🐳 Docker ready  |  ☁️ BrowserStack/Sauce templates  |  🤖 Android emulator helper scripts
 
 ## Install
 ```bash
 npm run install:all
 ```
 
-## Run
+## Headsup!!! ✋
+
+```
+Update to a newer build of Node 20 (e.g. nvm install 20.12.2 && nvm use 20.12.2) 
+```
+
+## Run 🚀
 - **Cypress:** `npm run -w cypress-e2e test`
 - **Playwright:** `npm run -w playwright-e2e install:browsers && npm run -w playwright-e2e test`
 - **WDIO (web):** `npm run -w wdio-web test`
 - **WDIO + Appium (Android):** `npm run -w wdio-mobile test` (needs emulator/device + APK)
 
-## Allure
+## Allure 📊
 Each project outputs `allure-results`; then:
 ```
 npm run -w <project> allure:generate
@@ -25,7 +31,7 @@ npm run -w playwright-e2e allure:generate
 npm run -w playwright-e2e allure:open
 ```
 
-## Docker
+## Docker 🐳
 ```
 docker compose -f docker/docker-compose.yml build
 docker compose -f docker/docker-compose.yml run --rm playwright
